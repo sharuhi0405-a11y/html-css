@@ -8,13 +8,11 @@
 
 body {
   font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-  color: #333;
   background: #f5f5f5;
+  color: #333;
 }
 
-/* =====================
-   HEADER
-===================== */
+/* ================= HEADER ================= */
 
 .header {
   background: #fff;
@@ -31,76 +29,70 @@ body {
   justify-content: space-between;
 }
 
-.header__logo {
+.logo {
   font-size: 24px;
   font-weight: bold;
   color: #f7931e;
   text-decoration: none;
 }
 
-.header__nav {
+.nav {
   display: flex;
   gap: 30px;
 }
 
-.nav__item {
+.nav a {
   text-decoration: none;
   color: #333;
   text-align: center;
+  font-size: 13px;
   position: relative;
 }
 
-.nav__en {
+.nav span {
   display: block;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.nav__jp {
   font-size: 11px;
   color: #777;
 }
 
-.nav__item::after {
+.nav a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: -5px;
   width: 0%;
   height: 2px;
   background: #f7931e;
-  transition: 0.3s;
+  transition: .3s;
 }
 
-.nav__item:hover::after {
+.nav a:hover::after {
   width: 100%;
 }
 
-.header__btn {
+.header-btn {
   background: #f7931e;
   color: #fff;
   padding: 12px 24px;
   border-radius: 50px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: .3s;
 }
 
-.header__btn:hover {
+.header-btn:hover {
   background: #ff8c00;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
-/* =====================
-   FV
-===================== */
+/* ================= FV ================= */
 
 .fv {
   position: relative;
   overflow: hidden;
-  padding: 100px 40px;
-  background: #f5f5f5;
+  padding: 120px 40px;
 }
 
+/* 左上オレンジ三角 */
 .fv::before {
   content: "";
   position: absolute;
@@ -108,11 +100,36 @@ body {
   left: 0;
   width: 40%;
   height: 100%;
-  background: linear-gradient(135deg, #f7b34a, #f7931e);
-  clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+  background: linear-gradient(135deg,#f7b34a,#f7931e);
+  clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
   z-index: 0;
 }
 
+/* 右下三角 */
+.fv::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  height: 40%;
+  background: linear-gradient(135deg,#f7b34a,#f7931e);
+  clip-path: polygon(40% 0, 100% 0, 100% 100%);
+}
+
+/* 薄い円ライン */
+.fv__bg-circle {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border: 2px solid #f7b34a;
+  border-radius: 50%;
+  top: 80px;
+  left: 200px;
+  opacity: .4;
+}
+
+/* 中身 */
 .fv__inner {
   max-width: 1200px;
   margin: auto;
@@ -120,33 +137,33 @@ body {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
-.fv__title {
+.fv__content h1 {
   font-size: 42px;
   line-height: 1.6;
   margin-bottom: 40px;
 }
 
-.fv__cta {
+.cta {
   display: inline-block;
   background: #f7931e;
   color: #fff;
   padding: 18px 48px;
   border-radius: 60px;
   text-decoration: none;
+  transition: .3s;
   font-size: 18px;
-  transition: 0.3s;
 }
 
-.fv__cta:hover {
+.cta:hover {
   background: #ff8c00;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.1);
 }
 
-.fv__note {
+.note {
   margin-top: 20px;
   font-size: 12px;
   color: #666;
@@ -155,20 +172,20 @@ body {
 
 /* 画像 */
 
-.fv__image-area {
+.fv__image-wrap {
   position: relative;
 }
 
-.fv__image {
+.fv__image-wrap img {
   width: 520px;
-  clip-path: ellipse(60% 70% at 50% 50%);
+  clip-path: polygon(20% 0%,100% 0%,100% 100%,0% 100%);
 }
 
 /* バッジ */
 
-.fv__badge {
+.badge {
   position: absolute;
-  top: -40px;
+  top: -50px;
   left: -60px;
   width: 180px;
   height: 180px;
@@ -180,61 +197,59 @@ body {
   z-index: 10;
 }
 
-.fv__badge p {
+.badge p {
   font-size: 14px;
   line-height: 1.4;
 }
 
-.fv__badge span {
+.badge span {
   display: block;
   font-size: 40px;
   font-weight: bold;
   margin-top: 10px;
 }
 
-/* =====================
-   Responsive
-===================== */
+/* ================= Responsive ================= */
 
-@media (max-width: 1024px) {
+@media (max-width:1024px){
+
+  .nav {
+    display: none;
+  }
 
   .fv__inner {
     flex-direction: column;
     text-align: center;
   }
 
-  .fv__image {
+  .fv__image-wrap img {
     width: 400px;
     margin-top: 40px;
   }
 
-  .fv__badge {
+  .badge {
     left: 50%;
     transform: translateX(-50%);
   }
 
-  .header__nav {
-    display: none;
-  }
-
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px){
 
   .fv {
     padding: 60px 20px;
   }
 
-  .fv__title {
+  .fv__content h1 {
     font-size: 28px;
   }
 
-  .fv__cta {
+  .cta {
     padding: 14px 32px;
     font-size: 16px;
   }
 
-  .fv__image {
-    width: 320px;
+  .fv__image-wrap img {
+    width: 300px;
   }
 }
