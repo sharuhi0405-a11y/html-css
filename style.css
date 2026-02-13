@@ -99,8 +99,8 @@ body {
   position: absolute;
   top: -300px;
   left: -350px;
-  width: 900px;
-  height: 900px;
+  width: 348px;
+  height: 348px;
   background: linear-gradient(135deg,#f7b34a 0%,#f7931e 100%);
   transform: rotate(37deg);
   z-index: 0;
@@ -113,8 +113,8 @@ body {
   position: absolute;
   bottom: -280px;
   right: -320px;
-  width: 700px;
-  height: 700px;
+  width: 348px;
+  height: 348px;
   background: linear-gradient(135deg,#f7b34a 0%,#f7931e 100%);
   transform: rotate(37deg);
   z-index: 0;
@@ -256,5 +256,6 @@ body {
     width: 300px;
   }
 }
+
 
 
