@@ -97,26 +97,25 @@ body {
 .fv::before {
   content: "";
   position: absolute;
-  top: -300px;
-  left: -350px;
-  width: 348px;
-  height: 348px;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 100%;
   background: linear-gradient(135deg,#f7b34a 0%,#f7931e 100%);
-  transform: rotate(37deg);
+  clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
   z-index: 0;
 }
-
 
 /* 右下三角 */
 .fv::after {
   content: "";
   position: absolute;
-  bottom: -280px;
-  right: -320px;
-  width: 348px;
-  height: 348px;
+  bottom: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
   background: linear-gradient(135deg,#f7b34a 0%,#f7931e 100%);
-  transform: rotate(37deg);
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
   z-index: 0;
 }
 
@@ -256,6 +255,7 @@ body {
     width: 300px;
   }
 }
+
 
 
 
