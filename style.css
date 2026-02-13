@@ -99,10 +99,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 55%;
+  width: 50%;
   height: 100%;
   background: linear-gradient(135deg,#f7b34a 0%,#f7931e 100%);
-  clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
   z-index: 0;
 }
 
@@ -110,12 +110,12 @@ body {
 .fv::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
-  width: 55%;
+  width: 50%;
   height: 100%;
   background: linear-gradient(135deg,#f7b34a 0%,#f7931e 100%);
-  clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
   z-index: 0;
 }
 
@@ -255,6 +255,7 @@ body {
     width: 300px;
   }
 }
+
 
 
 
