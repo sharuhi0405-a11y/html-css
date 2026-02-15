@@ -216,3 +216,56 @@ body{
     display:none;
   }
 }
+
+/* ================= SP RESPONSIVE 768px ================= */
+
+@media(max-width:768px){
+
+  /* ===== HEADER ===== */
+
+  .header{
+    padding:15px 20px;
+  }
+
+  .logo{
+    font-size:18px;
+  }
+
+  /* ===== FIRST VIEW ===== */
+
+  .fv{
+    padding:60px 20px;
+  }
+
+  .fv__left h1{
+    font-size:26px;
+    line-height:1.5;
+    margin-bottom:30px;
+  }
+
+  .btn-main{
+    padding:16px 32px;
+    font-size:14px;
+  }
+
+  .note{
+    font-size:11px;
+  }
+
+  .badge{
+    width:120px;
+    height:120px;
+    top:10px;
+    left:0;
+  }
+
+  .badge span{
+    font-size:24px;
+  }
+
+  .bg-left,
+  .bg-right,
+  .bg-fill{
+    display:none;
+  }
+}
