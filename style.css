@@ -330,6 +330,10 @@ body{
 
   .badge span{
     font-size:22px;
+  } 
+
+    .bg-right{
+    display:none;
   }
 
 }
@@ -357,13 +361,3 @@ body{
   }
 
 }
-
-
-  .bg-left,
-  .bg-right,
-  .bg-fill{
-    display:none;
-  }
-}
-
-
