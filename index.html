@@ -14,7 +14,13 @@
       POTEPAN CAMP
     </a>
 
-    <nav class="nav">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+   
+    <nav class="nav" id="nav">
       <a href="https://camp.potepan.com/content/">
         CONTENT<br><span>学習内容</span>
       </a>
@@ -83,5 +89,16 @@
   </div>
 </section>
 
+  <script>
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  nav.classList.toggle('active');
+});
+</script>
+
 </body>
 </html>
+
