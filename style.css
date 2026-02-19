@@ -188,8 +188,8 @@ body{
 /* バッジ */
 .badge{
   position:absolute;
-  top:10%;
-  right:5%;
+  top:-105px;
+  right:-150px;
   width:90px;
   height:90px;
   background:#f7931e;
@@ -426,6 +426,7 @@ body{
   }
 
 }
+
 
 
 
