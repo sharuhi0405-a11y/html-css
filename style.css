@@ -231,26 +231,28 @@ body{
   width:55%;
   display:flex;
   justify-content:flex-end;
+  transform:translateX(80px);
 }
 
 .fv__right img{
-  width:110%;
+  width:125%;
   max-width:none;
 }
 
 .badge{
   position:absolute;
-  top:-40px;
-  right:180px;
+  top:55%;
+  right:120px;
+  transform:translateY(-50%);
   width:260px;
   height:260px;
-  border-radius:50%;
   background:#f7931e;
+  border-radius:50%;
+  color:#fff;
   display:flex;
   flex-direction:column;
-  align-items:center;
   justify-content:center;
-  color:#fff;
+  align-items:center;
   text-align:center;
 }
 
@@ -259,9 +261,10 @@ body{
 }
 
 .badge span{
-  font-size:48px;
+  font-size:56px;
   font-weight:900;
 }
+
 
 /* ================== RESPONSIVE ================== */
 
@@ -423,6 +426,7 @@ body{
   }
 
 }
+
 
 
 
