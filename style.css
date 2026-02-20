@@ -14,7 +14,11 @@ body{
 
 .header{
   background:#fff;
-  padding:20px 80px;
+  padding:20px 40px;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:100;
 }
 
 .header__inner{
@@ -24,53 +28,23 @@ body{
 }
 
 .logo{
-  font-weight:900;
-  font-size:22px;
-  color:#f7931e;
-  text-decoration:none;
-  transition:opacity .3s;
+  font-weight:bold;
+  color:#f79314;
+  font-size:20px;
 }
 
-.logo:hover{
-  opacity:.7;
-}
-
-.nav{
+.nav ul{
   display:flex;
-  gap:40px;
-  align-items:center;
+  gap:30px;
+  list-style:none;
 }
 
 .nav a{
   text-decoration:none;
   color:#333;
-  font-size:13px;
-  text-align:center;
-  transition:all .3s;
+  font-weight:600;
 }
 
-.nav a span{
-  font-size:10px;
-  color:#777;
-}
-
-.nav a:hover{
-  color:#f7931e;
-}
-
-.btn-header{
-  background:#f7931e;
-  color:#fff !important;
-  padding:10px 22px;
-  border-radius:20px;
-}
-
-.btn-header:hover{
-  background:#ff8c00;
-  transform:translateY(-2px);
-}
-
-/* ================= HAMBURGER ================= */
 .hamburger{
   display:none;
   flex-direction:column;
@@ -79,272 +53,162 @@ body{
 }
 
 .hamburger span{
-  width:28px;
+  width:25px;
   height:3px;
   background:#333;
-  transition:.3s;
 }
 
-/* アニメーション */
-.hamburger.active span:nth-child(1){
-  transform:rotate(45deg) translate(5px,5px);
-}
-
-.hamburger.active span:nth-child(2){
-  opacity:0;
-}
-
-.hamburger.active span:nth-child(3){
-  transform:rotate(-45deg) translate(6px,-6px);
-}
-
-/* ================= FIRST VIEW ================= */
+/* ================= FV ================= */
 
 .fv{
-  position:relative;
   height:100vh;
-  overflow:hidden;
   display:flex;
-  align-items:flex-start;
-  padding:120px 80px 0;
-}
-
-.bg-right{
-  position:absolute;
-  bottom:120px;
-  right:0;
-  width:260px;
+  align-items:center;
+  position:relative;
+  padding:0 80px;
+  margin-top:80px;
+  overflow:hidden;
 }
 
 .fv__inner{
-  width:100%;
-  max-width:1200px;
-  margin:0 auto;
   display:flex;
+  width:100%;
   align-items:center;
   justify-content:space-between;
-  position:relative;
-  z-index:2;
 }
 
 .fv__left{
-  width:55%;
-  position:relative;
+  width:50%;
+  z-index:2;
 }
 
 .fv__left h1{
   font-size:48px;
-  font-weight:900;
   line-height:1.5;
+  font-weight:900;
   margin-bottom:40px;
 }
 
-.fv__right{
-  width:45%;
-  display:flex;
-  justify-content:flex-end;
-  align-items:flex-start;
-}
-
-.fv__right img{
-  width:110%;
-}
-
-.badge{
-  position:absolute;
-  top:30%;
-  right:18%;
-  transform:translateY(-50%);
-  width:220px;
-  height:220px;
-  background:#f7931e;
-  border-radius:50%;
+.fv__btn{
+  display:inline-block;
+  background:#f79314;
   color:#fff;
+  padding:18px 40px;
+  border-radius:40px;
+  font-weight:bold;
+  text-decoration:none;
+  margin-bottom:20px;
+}
+
+.fv__note{
+  font-size:12px;
+  color:#777;
+  line-height:1.6;
+}
+
+.fv__right{
+  width:50%;
+  position:relative;
   display:flex;
-  flex-direction:column;
   justify-content:center;
-  align-items:center;
-  text-align:center;
-  z-index:5;
 }
 
-.badge p{
-  font-size:20px;
+.FirstView__bg-image--main-visual{
+  width:100%;
+  max-width:600px;
 }
 
-.badge span{
-  font-size:60px;
-  font-weight:900;
+.FirstViewContent__badge-image{
+  position:absolute;
+  top:50px;
+  left:-50px;
+  width:150px;
 }
 
-
-/* ================== RESPONSIVE ================== */
-
-/* ===== 1200px以下（PC縮小） ===== */
-@media (max-width:1200px){
-
-  .header{
-    padding:20px 40px;
-  }
-
-  .fv{
-    padding:80px 40px;
-  }
-
-  .fv__left h1{
-    font-size:36px;
-  }
-
-  .badge{
-    right:-40px;
-  }
-
+/* 背景装飾 */
+.FirstView__bg-image--left-rectangle{
+  position:absolute;
+  top:0;
+  left:0;
+  width:300px;
 }
 
-/* ===== 992px以下（タブレット横〜SP） ===== */
-@media (max-width:992px){
+.FirstView__bg-image--right-rectangle{
+  position:absolute;
+  bottom:0;
+  right:0;
+  width:300px;
+}
 
-  /* ハンバーガー */
-  .hamburger{
-    display:flex;
-  }
+.FirstView__bg-image--fill-rectangle{
+  position:absolute;
+  left:100px;
+  top:150px;
+  width:300px;
+  opacity:0.3;
+}
+
+/* ================= レスポンシブ ================= */
+
+@media(max-width:768px){
 
   .nav{
     position:fixed;
-    top:0;
+    top:70px;
     right:-100%;
-    width:70%;
-    height:100vh;
     background:#fff;
+    width:200px;
+    height:100vh;
+    transition:0.3s;
+    padding-top:40px;
+  }
+
+  .nav ul{
     flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:30px;
-    transition:.4s;
-    box-shadow:-5px 0 20px rgba(0,0,0,.1);
+    gap:20px;
+    padding-left:20px;
   }
 
   .nav.active{
     right:0;
   }
 
+  .hamburger{
+    display:flex;
+  }
+
+  .fv{
+    flex-direction:column;
+    height:auto;
+    padding:40px 20px;
+  }
+
   .fv__inner{
     flex-direction:column;
-    text-align:left;
   }
 
   .fv__right{
     order:1;
     width:100%;
-    margin-bottom:30px;
   }
 
   .fv__left{
     order:2;
     width:100%;
+    text-align:left;
   }
 
-  .btn-main{
-    display:block;
-    margin:30px auto 0;
+  .FirstViewContent__badge-image{
+    position:absolute;
+    top:20px;
+    right:20px;
+    left:auto;
+    width:120px;
   }
 
-  .badge{
-    position:relative;
-    left:0;
-    top:-40px;
-    margin:0 auto 20px;
-  }
-
-}
-
-
-/* ===== 768px以下（タブレット縦〜SP） ===== */
-@media (max-width:768px){
-
-  .header{
-    padding:15px 20px;
-  }
-
-  .logo{
-    font-size:18px;
-  }
-
-  .fv{
-    padding:60px 20px;
-  }
-
-  .fv__left h1{
-    font-size:24px;
-    line-height:1.5;
-    margin-bottom:25px;
-  }
-
-  .btn-main{
-    padding:16px 32px;
-    font-size:14px;
-    width:80%;
-  }
-
-  .note{
-    font-size:11px;
-  }
-
-.badge{
-  width:100px;
-  height:100px;
-}
-
-.badge span{
-  font-size:26px;
-  font-weight:900;
-}
-
-  .badge p{
-  font-size:14px;
-}
-
-    .bg-right{
-    display:none;
-  }
-
-  .fv__right img{
-  width:85%;
-  margin-left:20px;
-  display:block;
-}
-
-}
-
-/* ===== 480px以下（小型スマホ） ===== */
-@media (max-width:480px){
-
-  .fv__left h1{
-    font-size:20px;
-  }
-
-  .btn-main{
+  .fv__btn{
     width:100%;
     text-align:center;
   }
 
-  .badge{
-    width:90px;
-    height:90px;
-  }
-
-  .badge span{
-    font-size:18px;
-  }
-
 }
-
-
-
-
-
-
-
-
-
-
