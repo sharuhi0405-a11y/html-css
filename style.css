@@ -21,7 +21,7 @@ body{
 .header__inner{
   max-width:1080px;
   margin:0 auto;
-  padding:20px 0;
+  padding:20px 24px;  
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -38,11 +38,11 @@ body{
 }
 
 .nav ul{
-  display:flex;       
-  flex-direction:row; 
+  display:flex;
   gap:32px;
   list-style:none;
   align-items:center;
+  flex-wrap:nowrap;  
 }
 
 .nav li{
@@ -81,8 +81,10 @@ body{
 }
 
 .fv__inner{
-  display:flex;
+  max-width:1080px;
+  margin:0 auto;
   width:100%;
+  display:flex;
   align-items:center;
   justify-content:space-between;
 }
@@ -232,6 +234,7 @@ body{
   }
 
 }
+
 
 
 
