@@ -107,6 +107,13 @@ body{
   display:flex;
   align-items:center;
   padding:0 80px;
+} 
+
+.bg-right{
+  position:absolute;
+  bottom:60px;
+  right:0;
+  width:300px;
 }
 
 .fv__inner{
@@ -134,20 +141,21 @@ body{
 
 .fv__right{
   width:52%;
-  display:flex;
-  justify-content:flex-end;
+  position:relative;
 }
 
 .fv__right img{
-  width:120%;
-  max-width:none;
+  position:absolute;
+  top:0;
+  right:0;
+  width:90%;
 }
 
 /* バッジ */
 .badge{
   position:absolute;
-  top:50%;
-  right:-100px;
+  top:35%;
+  right:-80px;
   transform:translateY(-50%);
   width:280px;
   height:280px;
@@ -189,7 +197,7 @@ body{
   }
 
   .badge{
-    left:-40px;
+    right:-40px;
   }
 
 }
@@ -331,6 +339,7 @@ body{
   }
 
 }
+
 
 
 
