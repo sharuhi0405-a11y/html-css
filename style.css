@@ -22,12 +22,12 @@ body{
 }
 
 .header__inner{
-  max-width:1200px;   
-  margin:0 auto;      
-  padding:20px 40px;
+  max-width:1080px;
+  margin:0 auto;
+  padding:20px 20px;
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
 }
 
 .logo{
@@ -36,15 +36,26 @@ body{
   font-size:20px;
 }
 
+.nav{
+  display:block;
+}
+
 .nav ul{
-  display:flex;
-  gap:30px;
+  display:flex;       
+  flex-direction:row; 
+  gap:32px;
   list-style:none;
+  align-items:center;
+}
+
+.nav li{
+  white-space:nowrap;
 }
 
 .nav a{
   text-decoration:none;
   color:#333;
+  font-size:14px;
   font-weight:600;
 }
 
@@ -225,4 +236,5 @@ body{
   }
 
 }
+
 
