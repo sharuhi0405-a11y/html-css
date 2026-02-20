@@ -102,21 +102,18 @@ body{
 
 .fv{
   position:relative;
+  height:100vh;
   overflow:hidden;
-  min-height:100vh;
   display:flex;
   align-items:center;
   padding:0 80px;
-  min-height:100vh;
-  height:100vh;
-  overflow:hidden;
-} 
+}
 
 .bg-right{
   position:absolute;
-  bottom:60px;
+  bottom:120px;
   right:0;
-  width:300px;
+  width:260px;
 }
 
 .fv__inner{
@@ -144,32 +141,23 @@ body{
 
 .fv__right{
   width:52%;
-  position:relative;
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-start;
 }
 
 .fv__right img{
-  position:absolute;
-  top:0;
-  right:0;
-  width:90%;
+  width:80%;
 }
 
 /* バッジ */
 .badge{
   position:absolute;
-  top:35%;
-  right:-80px;
+  top:30%;
+  right:18%;
   transform:translateY(-50%);
-  width:280px;
-  height:280px;
-  background:#f7931e;
-  border-radius:50%;
-  color:#fff;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+  width:220px;
+  height:220px;
 }
 
 .badge p{
@@ -342,6 +330,7 @@ body{
   }
 
 }
+
 
 
 
