@@ -105,8 +105,8 @@ body{
   height:100vh;
   overflow:hidden;
   display:flex;
-  align-items:center;
-  padding:0 80px;
+  align-items:flex-start;
+  padding:120px 80px 0;
 }
 
 .bg-right{
@@ -128,7 +128,7 @@ body{
 }
 
 .fv__left{
-  width:48%;
+  width:55%;
   position:relative;
 }
 
@@ -140,17 +140,16 @@ body{
 }
 
 .fv__right{
-  width:52%;
+  width:45%;
   display:flex;
   justify-content:flex-end;
   align-items:flex-start;
 }
 
 .fv__right img{
-  width:80%;
+  width:110%;
 }
 
-/* バッジ */
 .badge{
   position:absolute;
   top:30%;
@@ -158,6 +157,15 @@ body{
   transform:translateY(-50%);
   width:220px;
   height:220px;
+  background:#f7931e;
+  border-radius:50%;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  z-index:5;
 }
 
 .badge p{
@@ -330,6 +338,7 @@ body{
   }
 
 }
+
 
 
 
