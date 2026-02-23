@@ -2,37 +2,30 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>POTEPAN CAMP 模写</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POTEPAN CAMP</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header">
+  <header class="header">
   <div class="header__inner">
     <div class="logo">POTEPAN CAMP</div>
 
      <nav class="nav" id="nav">
-      <a href="https://camp.potepan.com/content/">
-        CONTENT<br><span>学習内容</span>
-      </a>
-      <a href="https://camp.potepan.com/interview/">
-        INTERVIEW<br><span>受講生の声</span>
-      </a>
-      <a href="https://camp.potepan.com/blog/">
-        BLOG<br><span>ブログ</span>
-      </a>
-      <a href="https://camp.potepan.com/recruit/">
-        RECRUIT<br><span>採用企業様へ</span>
-      </a>
-      <a href="https://camp.potepan.com/training/">
-        TRAINING<br><span>企業研修</span>
-      </a>
-      <a href="https://camp.potepan.com/contact/" class="btn-header">
+      <a href="https://camp.potepan.com/content/">CONTENT<span>学習内容</span></a>
+      <a href="https://camp.potepan.com/interview/">INTERVIEW<span>受講生の声</span></a>
+      <a href="https://camp.potepan.com/faq/">FAQ<span>よくある質問</span></a>
+      <a href="https://camp.potepan.com/recruit/">RECRUIT<span>採用企業様へ</span></a>
+      <a href="https://camp.potepan.com/u29/">U29<span>29歳以下の方へ</span></a>
+
+      <a href="https://camp.potepan.com/contact/" class="header-btn nav-btn">
         無料カウンセリング
       </a>
+    </nav>
 
-    <div class="hamburger" id="hamburger">
+    <div class="hamburger">
       <span></span>
       <span></span>
       <span></span>
@@ -42,7 +35,7 @@
 
 <section class="fv">
 
-  <!-- 背景三角形 -->
+  <!-- 背景装飾 -->
   <img class="FirstView__bg-image FirstView__bg-image--left-rectangle"
     src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/left-rectangle.svg"
     alt="三角形（左上）">
@@ -57,7 +50,6 @@
 
   <div class="fv__inner">
 
-    <!-- 左テキスト -->
     <div class="fv__left">
       <h1>
         AI搭載カリキュラムと<br>
@@ -65,42 +57,40 @@
         最速でWebエンジニアに
       </h1>
 
-      <a href="/contact" class="FirstViewContent__button">
-      まずは無料カウンセリングへ
+      <div class="fv__badge">
+        <img class="FirstViewContent__badge-image"
+          src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/badge.svg"
+          alt="Webエンジニア輩出No.1">
+      </div>
+
+      <a href="https://camp.potepan.com/contact/" class="fv__btn">
+        まずは無料カウンセリングへ
       </a>
-      
+
       <p class="fv__note">
         ※ショッパーズアイ「プログラミングスクール10社を対象にしたサイト比較イメージ調査<br>
-        （2020年5月22日～25日）」より全国の22～49歳の男女691名へのインターネット調査
+        （2020年5月22日〜25日）」より全国の22〜49歳の男女691名へのインターネット調査
       </p>
     </div>
 
-    <!-- 右画像 -->
     <div class="fv__right">
       <img class="FirstView__bg-image FirstView__bg-image--main-visual"
         src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/main-visual.webp"
         alt="メインビジュアル">
-
-      <img class="FirstViewContent__badge-image"
-        src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/badge.svg"
-        alt="Webエンジニア輩出No.1">
     </div>
 
   </div>
 </section>
 
 <script>
-const hamburger = document.getElementById("hamburger");
+const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav");
 
 hamburger.addEventListener("click", () => {
   nav.classList.toggle("active");
+  hamburger.classList.toggle("active");
 });
 </script>
 
 </body>
 </html>
-
-
-
-
